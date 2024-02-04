@@ -1,0 +1,352 @@
+Program - 1
+1. Write a program to check whether a given string is a palindrome or not using for loop and if-else statement.
+
+		String text, nstr="";
+		char ch;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String : ");
+		text = sc.nextLine();
+		
+		for(int i =0; i < text.length(); i++)
+		{
+			ch = text.charAt(i);
+			nstr =ch+nstr;
+		}
+		if(text.equalsIgnoreCase(nstr))
+		{
+			System.out.println("Given String is a Palindrome");
+		}else 
+		{
+			System.out.println("Given String is Not a Palindrome");
+		}
+	}
+}
+
+=================================================================================================================================
+OutPut:
+Enter a String : 
+Car
+Given String is Not a Palindrome
+
+Enter a String : 
+Racecar
+Given String is a Palindrome
+
+=================================================================================================================================
+Program - 2
+2. Write a program that reads in a string from the user and uses a loop to reverse the order 
+of the characters in the string.Then, output the reversed string.
+		
+		String text = "test", nstr="";
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Enter the String :" );
+		text = sc.nextLine();
+		
+		char ch;
+		
+		//System.out.println(text.length());
+		
+		for(int i =0; i<text.length(); i++)
+		{
+			ch = text.charAt(i);
+			nstr = ch+nstr;			
+		}
+		System.out.print("The reversed String is : "+nstr);
+	}
+}
+
+=================================================================================================================================
+OutPut:
+Enter the String :Test
+The reversed String is : tseT
+
+=================================================================================================================================
+Program - 3
+
+3. Write a program to print the given below pattern
+		
+		int n, count = 1;
+		Scanner scanobj = new Scanner(System.in);
+		System.out.println("Enter the Number :");
+		n = scanobj.nextInt();
+		
+		for(int row = 1; row<= n ; row++) //row
+		{
+			for(int col = 1; col <= row; col++) //col
+			{
+				System.out.print(count+ " ");
+				++count;
+				
+			}System.out.print("\n");
+		}
+	}
+}
+=================================================================================================================================
+OutPut:
+Enter the Number :
+4
+
+1 
+2 3 
+4 5 6 
+7 8 9 10 
+
+=================================================================================================================================
+Program - 4
+4.Write a program to print the given below * pattern
+
+int num;
+	      
+	    Scanner sc = new Scanner(System.in);
+	    System.out.print("Enter the number : ");
+	    num = sc.nextInt();
+	    	    
+	      for(int i=1;i<=num;i++)
+	      {
+	         for(int j=1;j<=num;j++)
+	         {
+	            if(j==i || j==num-i+1)
+	               System.out.print("*");
+	               System.out.print(" ");
+	         }
+	         System.out.println();
+	       }
+	    }
+		
+	}
+=================================================================================================================================
+OutPut:
+Enter the number : 5
+*    * 
+ *  *  
+  *   
+ *  *  
+*    * 
+
+=================================================================================================================================
+Program - 5
+5. Grade System
+
+int Score;
+		
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.println("Enter Your Score :" );
+		Score = scanobj.nextInt();
+		
+		if(Score == 100)
+		{
+			System.out.println("Your Grade is S");
+		}
+		else if(Score >= 90 && Score <= 99 )
+		{
+			System.out.println("Your Grade is A");
+		}
+		else if(Score >= 80 && Score <= 89 )
+		{
+			System.out.println("Your Grade is B");
+		}
+		else if(Score >= 70 && Score <= 79 )
+		{
+			System.out.println("Your Grade is C");
+		}
+		else if(Score >= 60 && Score <= 69 )
+		{
+			System.out.println("Your Grade is D");
+		}
+		else if(Score >= 50 && Score <= 59 )
+		{
+			System.out.println("Your Grade is E");
+		}
+		else if(Score <= 49 )
+		{
+			System.out.println("Your Grade is F");
+		}
+		else if(Score > 100 )
+		{
+			System.out.println("Your Entered Invalid Score");
+		}
+	}
+}
+=================================================================================================================================
+OutPut:
+Enter Your Score :
+75
+Your Grade is C
+
+Enter Your Score :
+45
+Your Grade is F
+
+Enter Your Score :
+101
+Your Entered Invalid Score
+
+=================================================================================================================================
+Program - 6
+
+6.Hotel Traiff Rate
+
+int month, days;
+		double rent, rate=0;
+		
+		DecimalFormat decobj = new DecimalFormat("0.00");
+		
+		Scanner scanobj = new Scanner(System.in);
+		
+		System.out.print("Enter Number of Month :");
+		month = scanobj.nextInt();
+		System.out.print("Enter the Room Rent/day :");
+		rent = scanobj.nextDouble();
+		System.out.print("Enter no of days stayed :");
+		days = scanobj.nextInt();
+		
+		switch (month) {
+		case 1:
+			if(month ==1)
+			{
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 2:
+			if(month ==2)
+			{
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 3: 
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+		
+		case 4: 
+			if(month ==4)
+			{
+				rate = days * (rent + ((rent*0.2)));
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 5: 
+			if(month ==5)
+			{
+				rate = days * (rent + ((rent*0.2)));
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 6:
+			if(month ==6)
+			{
+				rate = days * (rent + ((rent*0.2)));
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 7:
+			if(month ==7)
+			{
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 8:
+			if(month ==8)
+			{
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 9:
+			if(month ==9)
+			{
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 10:
+			if(month ==10)
+			{
+				rate = days * rent;
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 11: 
+			if(month ==11)
+			{
+				rate = days * (rent + ((rent*0.2)));
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		case 12:
+			if(month ==12)
+			{
+				rate = days * (rent + ((rent*0.2)));
+				System.out.println("Cost of the Room is : " +decobj.format(rate));
+				break;
+			}
+		default:
+
+			if(month>=13)
+			{
+				System.out.println("You Enter Invalid Month");
+			}
+			
+		}
+	}
+}
+
+=================================================================================================================================
+OutPut:
+Enter Number of Month :3
+Enter the Room Rent/day :1000
+Enter no of days stayed :2
+Cost of the Room is : 2000.00
+
+Enter Number of Month :4
+Enter the Room Rent/day :999.99
+Enter no of days stayed :3
+Cost of the Room is : 3599.96
+
+=================================================================================================================================
+Program - 7
+7.Write a program to calculate the largest number among three numbers
+		
+		int num1, num2, num3;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Number1 :");
+		num1 = sc.nextInt();
+		System.out.println("Enter the Number2 :");
+		num2 = sc.nextInt();
+		System.out.println("Enter the Number3 :");
+		num3 = sc.nextInt();
+	
+		if(num1 >= num2 && num1 >= num3)
+		{
+			System.out.println("The largest Number is :" +num1);
+		}else if(num2 >= num1 && num2 >= num3)
+		{
+			System.out.println("The largest Number is :" +num2);
+		}else if(num3 >= num1 && num3 >= num2)
+		{
+			System.out.println("The largest Number is :" +num3);
+		}
+	}
+}
+
+=================================================================================================================================
+OutPut:
+Enter the Number1 :
+10
+Enter the Number2 :
+20
+Enter the Number3 :
+35
+The largest Number is :35
+
+Enter the Number1 :
+-3
+Enter the Number2 :
+0
+Enter the Number3 :
+-11
+The largest Number is :0
